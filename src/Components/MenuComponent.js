@@ -15,8 +15,7 @@ class MenuComponent extends Component{
       render(){
         return(
           <View style={styles.viewStyle}>
-            <View style={{marginTop:windowHeight/4}}>
-                <CustomButton onPress={()=>{this.hakkimizda()}}> Hakkımızda </CustomButton>
+            <View style={{marginTop:windowHeight/3}}>
                 <CustomButton onPress={()=>{this.urunler()}}> Ürünler </CustomButton>
                 <CustomButton onPress={()=>{this.kategori()}}> Kategoriler </CustomButton>
             </View>

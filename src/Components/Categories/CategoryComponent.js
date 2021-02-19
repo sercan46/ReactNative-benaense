@@ -1,12 +1,12 @@
 import React,{Component} from 'react';
 import {Text,FlatList} from 'react-native';
 import {connect} from 'react-redux';
-import {categoryList} from '../../actions';
+import {categoryListCategory} from '../../actions';
 import _ from "lodash";
 import CategoryList from './CategoryListItem'
 class CategoryComponent extends Component{
   componentDidMount() {
-      this.props.categoryList();
+      this.props.categoryListCategory();
   }
   renderRow({ item, index }) {
      return <CategoryList category={item} />;
@@ -21,11 +21,11 @@ class CategoryComponent extends Component{
     )
   }
 };
-const mapStateToProps=({categoryDataResponse})=>{
-    const categoryArray=_.map(categoryDataResponse,(val,key)=>{
+const mapStateToProps=({CategoryDataCategoryResponse})=>{
+    const categoryArray=_.map(CategoryDataCategoryResponse,(val,key)=>{
         return { ...val.category,key };
     });
     console.log('categoryArray',categoryArray)
     return {categoryArray};
 };
-export default connect(mapStateToProps,{categoryList}) (CategoryComponent);
+export default connect(mapStateToProps,{categoryListCategory}) (CategoryComponent);

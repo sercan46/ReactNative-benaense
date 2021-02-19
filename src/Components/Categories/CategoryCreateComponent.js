@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View,Text,TextInput,Picker} from 'react-native';
 import { CustomCard, CustomCardSection,CustomButton ,CustomSpinner} from '../../UiMixin';
-import {categoryChange,categoryCreate,categoryList} from '../../actions';
+import {categoryChange,categoryCreate,categoryListCategory} from '../../actions';
 import {connect} from 'react-redux';
 import _ from 'lodash'
 
@@ -10,7 +10,7 @@ class CategoryCreateComponent extends Component{
   clickSave(){
     const {description,image,name}=this.props
     this.props.categoryCreate({description,image,name})
-    //this.props.productList();
+    this.props.categoryListCategory();
   }
 
   renderButton(){
@@ -26,7 +26,7 @@ class CategoryCreateComponent extends Component{
           <View style={{paddingTop:100}}>
               <CustomCardSection>
                   <TextInput
-                    placeholder="Ürün Adı"
+                    placeholder="Kategori Adı"
                     style={inputStyle}
                     value={this.props.name}
                     onChangeText={name=>this.props.categoryChange({props:'name',value:name})}
@@ -34,7 +34,7 @@ class CategoryCreateComponent extends Component{
               </CustomCardSection>
               <CustomCardSection>
                   <TextInput
-                    placeholder="Ürün Açıklaması"
+                    placeholder="Kategori Açıklaması"
                     style={inputStyle}
                     value={this.props.description}
                     onChangeText={description=>this.props.categoryChange({props:'description',value:description})}
@@ -74,4 +74,4 @@ const mapToStateProps=({categoryAddResponse})=>{
 
   return {description,image,name,loading};
 }
-export default connect(mapToStateProps,{categoryChange,categoryCreate,categoryList}) (CategoryCreateComponent);
+export default connect(mapToStateProps,{categoryChange,categoryCreate,categoryListCategory}) (CategoryCreateComponent);

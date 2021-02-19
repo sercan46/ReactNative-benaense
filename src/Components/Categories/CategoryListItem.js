@@ -3,7 +3,7 @@ import {View,Text,TouchableWithoutFeedback,Image,StyleSheet} from 'react-native'
 import {Actions} from 'react-native-router-flux';
 class CategoryList extends Component{
   categoryClick(){
-    //Actions.productUpdatePage({product:this.props.product});
+    Actions.categoryUpdatePage({category:this.props.category});
   }
   render(){
     const {description,image,name,key}=this.props.category;

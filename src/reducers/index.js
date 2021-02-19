@@ -6,6 +6,10 @@ import CategoryDataReducers from './CategoryDataReducers';
 import ProductUpdateReducers from './ProductUpdateReducers';
 import ProductsDeleteReducers from './ProductsDeleteReducers';
 import CategoryCreateReducers from './CategoryCreateReducers';
+import CategoryDataCategoryReducers from './CategoryDataCategoryReducers';
+import CategoryUpdateReducers from './CategoryUpdateReducers';
+import CategoryDeleteReducers from './CategoryDeleteReducers'
+
 export default combineReducers({
   kimlikdogrulamaResponse:KimlikDogrulamaReducers,
   productDataResponse:ProductDataReducers,
@@ -13,5 +17,8 @@ export default combineReducers({
   categoryDataResponse:CategoryDataReducers,
   productUpdateResponse:ProductUpdateReducers,
   productDeleteResponse:ProductsDeleteReducers,
-  categoryAddResponse:CategoryCreateReducers
+  CategoryDataCategoryResponse:CategoryDataCategoryReducers,
+  categoryAddResponse:CategoryCreateReducers,
+  categoryUpdateResponse:CategoryUpdateReducers,
+  categoryDeleteResponse:CategoryDeleteReducers
 })
