@@ -17,7 +17,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* benaenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* benaenseTests.m */; };
 		76FB6E1A9DC0F069957370BA /* libPods-benaense-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7959EDB8813B98921131F14 /* libPods-benaense-tvOS.a */; };
 		778AE15E74ED5F159BE78180 /* libPods-benaense-benaenseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D5BBDB3CBCB5C8641B0D1A /* libPods-benaense-benaenseTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		895CAF1A25E12F4A00C67250 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895CAF1925E12F4A00C67250 /* Launch Screen.storyboard */; };
+		895CAF1B25E12F4A00C67250 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895CAF1925E12F4A00C67250 /* Launch Screen.storyboard */; };
 		C0EDA488B79F40280E37F3F2 /* libPods-benaense-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CD5E2843817CBBB9CAAC88 /* libPods-benaense-tvOSTests.a */; };
 		F88C2F9040FF62F80241E679 /* libPods-benaense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DE0927EB47AD113D7A74DF /* libPods-benaense.a */; };
 /* End PBXBuildFile section */
@@ -60,7 +61,7 @@
 		37E53B08639D2D590C4E5112 /* Pods-benaense-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benaense-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-benaense-tvOSTests/Pods-benaense-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73D5BBDB3CBCB5C8641B0D1A /* libPods-benaense-benaenseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benaense-benaenseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76918184304064309A0BC126 /* Pods-benaense-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benaense-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-benaense-tvOSTests/Pods-benaense-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = benaense/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		895CAF1925E12F4A00C67250 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A7959EDB8813B98921131F14 /* libPods-benaense-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benaense-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03321B98F80BCA5670455F7 /* Pods-benaense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benaense.debug.xcconfig"; path = "Target Support Files/Pods-benaense/Pods-benaense.debug.xcconfig"; sourceTree = "<group>"; };
 		B5EF0CCCEB1244D1E0D5A6BB /* Pods-benaense-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benaense-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-benaense-tvOS/Pods-benaense-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,8 +131,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				895CAF1925E12F4A00C67250 /* Launch Screen.storyboard */,
 			);
 			name = benaense;
 			sourceTree = "<group>";
@@ -194,7 +195,6 @@
 				37E53B08639D2D590C4E5112 /* Pods-benaense-tvOSTests.debug.xcconfig */,
 				76918184304064309A0BC126 /* Pods-benaense-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -340,7 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				895CAF1A25E12F4A00C67250 /* Launch Screen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895CAF1B25E12F4A00C67250 /* Launch Screen.storyboard in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
