@@ -1,5 +1,5 @@
 import React ,{Component} from 'react';
-import {Text,View,StyleSheet,TextInput,Button,Image,Dimensions,Linking} from 'react-native';
+import {Text,ScrollView,StyleSheet,TextInput,Button,Image,Dimensions,Linking} from 'react-native';
 import { CustomCard, CustomCardSection,CustomButton ,CustomSpinner} from '../UiMixin';
 import { BENEONSE } from '../Image';
 import { Actions } from 'react-native-router-flux';
@@ -26,7 +26,7 @@ class LoginComponent extends Component{
 
     render(){
       return(
-        <View style={styles.containerStyle}>
+        <ScrollView style={styles.containerStyle}>
          <Image source={BENEONSE}   style={{ width: windowWidth, height: windowWidth ,marginTop:windowWidth/12}}/>
           <CustomCard>
             <CustomCardSection>
@@ -56,7 +56,7 @@ class LoginComponent extends Component{
           <Text style={styles.textStyle}>Üyelik İşlemleri İçin İletişime Geçiniz</Text>
           <Button onPress={() => Linking.openURL('mailto:chesercan@gmail.com') }
       title="chesercan@gmail.com"  />
-        </View>
+        </ScrollView>
       )
     }
 
