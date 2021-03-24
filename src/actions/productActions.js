@@ -49,6 +49,8 @@ export const productCreate=({category,count,description,image,name,price})=>{
         .then(()=>{
           dispatch({type:CREATE_REQUEST_SUCCESS});
           Actions.pop();
+          productList();
+
       });
       };
 };
@@ -67,6 +69,8 @@ export const productUpdate=({category,count,description,image,name,price,key})=>
         .then((resp)=>{
               dispatch({type:UPDATE_REQUEST_SUCCESS});
               Actions.pop();
+              productList();
+
         })
         .catch((err)=>{
           console.log('ERR',err)

@@ -12,9 +12,13 @@ class ProductComponent extends Component{
     renderRow({ item, index }) {
         return <ProductList product={item} />;
     }
+
     render(){
+      this.props.productList();
+
       return(
         <FlatList
+        style={{marginTop:'9%'}}
             data={this.props.productArray}
             renderItem={this.renderRow}
             keyExtractor={(item, index) => index.toString()}

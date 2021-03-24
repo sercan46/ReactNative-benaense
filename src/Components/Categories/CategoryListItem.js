@@ -16,10 +16,10 @@ class CategoryList extends Component{
                 <View style={styles.rightContainer}>
                 <View style={styles.rightStyle}>
 
-                    <Text>
+                    <Text style={styles.textStyle}>
                         {name}
                     </Text>
-                    <Text>
+                    <Text style={styles.textStyle}>
                         {description}
                     </Text>
                 </View>
@@ -30,39 +30,44 @@ class CategoryList extends Component{
   }
 
 };
-const styles=StyleSheet.create({
-      cardStyle:{
-          flex:1,
-          flexDirection:'row',
-          shadowColor: "#000",
-          shadowOffset: {
-          	width: 0,
-          	height: 12,
-          },
-          shadowOpacity: 0.58,
-          shadowRadius: 16.00,
-          elevation: 24,
-          paddingTop:10,
-          borderWidth:2,
-          borderColor:'crimson'
-        },
-        rightContainer:{
-          flex:1,
-          flexDirection: 'column',
-          justifyContent:'space-around',
-          paddingTop:40
-        },
-        rightStyle:{
-          flex:1,
-          flexDirection: 'row',
-          justifyContent:'space-around'
-        },
-        lineStyle:{
-               borderWidth: 0.5,
-               borderColor:'gray',
-               margin:10,
-               width:200,
-               height:1
-        }
+const styles = StyleSheet.create({
+  cardStyle: {
+    flex: 1,
+    flexDirection: 'row',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+    elevation: 24,
+    paddingTop: 10,
+    borderWidth: 2,
+    borderColor: 'crimson',
+    backgroundColor: 'gray'
+  },
+  textStyle: {
+    color: 'white',
+   paddingTop:'15%'
+  },
+  rightContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+  },
+  rightStyle: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  lineStyle: {
+    borderWidth: 0.5,
+    borderColor: 'white',
+    margin: 10,
+    maxWidth:100,
+    width: 200,
+    height: 1
+  }
 });
 export default CategoryList

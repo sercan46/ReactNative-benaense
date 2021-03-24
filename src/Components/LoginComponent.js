@@ -1,5 +1,5 @@
 import React ,{Component} from 'react';
-import {Text,ScrollView,StyleSheet,TextInput,Button,Image,Dimensions,Linking} from 'react-native';
+import {Text,ScrollView,StyleSheet,TextInput,Button,Image,Dimensions,Linking, TouchableOpacity} from 'react-native';
 import { CustomCard, CustomCardSection,CustomButton ,CustomSpinner} from '../UiMixin';
 import { BENEONSE } from '../Image';
 import { Actions } from 'react-native-router-flux';
@@ -54,8 +54,9 @@ class LoginComponent extends Component{
           </CustomCard>
             {this.renderButton()}
           <Text style={styles.textStyle}>Üyelik İşlemleri İçin İletişime Geçiniz</Text>
-          <Button onPress={() => Linking.openURL('mailto:chesercan@gmail.com') }
-      title="chesercan@gmail.com"  />
+          <TouchableOpacity style={{backgroundColor:'gray',marginLeft:80,marginRight:80,borderRadius:20}} onPress={() => Linking.openURL('mailto:chesercan@gmail.com') }>
+            <Text style={{textAlign:'center',fontWeight:'bold',color:'white'}}>chesercan@gmail.com</Text>
+            </TouchableOpacity>
         </ScrollView>
       )
     }
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
     flex:2
   },
   textStyle:{
+    color:'red',
     paddingLeft:windowWidth/5,
     marginTop:20,
 
