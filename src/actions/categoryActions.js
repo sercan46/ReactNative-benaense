@@ -10,6 +10,7 @@ import {
 } from './types';
 import axios from 'axios';
 import {Actions} from 'react-native-router-flux';
+import { categoryList } from './productActions';
 
 export const categoryChange=({props,value})=>{
   return(dispatch)=>{
@@ -37,9 +38,10 @@ export const categoryCreate=({description,image,name})=>{
           axios.post('https://eticaret-de184-default-rtdb.firebaseio.com/category.json',
             {category:sendCategory})
             .then((response)=>{
-              console.log('respppasd',response)
               dispatch({type:CREATE_REQUEST_CATEGORY_SUCCESS});
               Actions.pop();
+              categoryListCategory();
+
             }).catch((err)=>{
               console.error(err);;
             });
@@ -55,11 +57,9 @@ export const categoryUpdate=({description,image,name,key})=>{
         dispatch({type:UPDATE_REQUEST_CATEGORY});
         axios.put('https://eticaret-de184-default-rtdb.firebaseio.com/category/'+key+'/.json',{category:updateCategory})
         .then((resp)=>{
-          console.log('ASDASDASDASD',resp)
             dispatch({type:UPDATE_REQUEST_SUCCESS_CATEGORY});
-            console.log('11111',resp)
-
             Actions.pop();
+            categoryListCategory();
         })
         .catch((err)=>{
           console.error(err);

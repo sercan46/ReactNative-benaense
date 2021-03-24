@@ -25,10 +25,8 @@ class MenuComponent extends Component{
 }
 const styles=StyleSheet.create({
   viewStyle:{
-
     backgroundColor:'pink',
     height:windowHeight
-
   }
 })
 export default MenuComponent
