@@ -1,3 +1,9 @@
-# ReactNative-benaense
-Mobile Benaense
-React Native ve Redux kullanarak geliştirilen mobil projem. Benaense web sayfası ve benaense admin paneli sayfası ile ortak veri tabanı kullanmaktadır.
+# Benaense
+
+My mobile project developed using Mobile Benaense React Native and Redux. It uses a common database with the Benaense web page and the benaense admin panel page.
+
+## To start the project
+
+npm install
+
+react-native run-android || react-native run-ios
